@@ -97,3 +97,26 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+###############################################################################
+# FMOD Specific Rules
+###############################################################################
+
+# Never ignore DLLs/Libraries in the FMOD subfolder (Unity needs these to run FMOD)
+!/[Aa]ssets/Plugins/FMOD/**/lib/*
+
+# Don't ignore images and gizmos used by FMOD in the Unity Editor
+!/[Aa]ssets/Gizmos/FMOD/*
+!/[Aa]ssets/Editor Default Resources/FMOD/*
+
+# Ignore the Cache folder since it is updated locally
+/[Aa]ssets/Plugins/FMOD/Cache/*
+
+# Ignore bank files in StreamingAssets if you are regenerating them from the FMOD Project
+# NOTE: If you want your team to be able to hear audio without having FMOD Studio installed, 
+# you might want to COMMENT these two lines out so they ARE committed.
+/[Aa]ssets/StreamingAssets/**/*.bank
+/[Aa]ssets/StreamingAssets/**/*.bank.meta
+
+# Log files
+fmod_editor.log

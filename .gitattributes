@@ -1,0 +1,43 @@
+###############################################################################
+# Unity Default Attributes
+###############################################################################
+
+# Handle line endings for scripts to prevent cross-platform conflicts
+*.cs text eol=lf
+*.unity text eol=lf
+*.prefab text eol=lf
+*.asset text eol=lf
+*.mat text eol=lf
+*.meta text eol=lf
+*.controller text eol=lf
+
+###############################################################################
+# Git LFS (Large File Storage)
+# These files are binary and should be handled by LFS to keep your repo small
+###############################################################################
+
+# Visual Assets
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+
+# Audio Assets (Crucial for FMOD)
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.bank filter=lfs diff=lfs merge=lfs -text
+
+# Video & DLLs
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+
+###############################################################################
+# Your Specific FMOD Overrides
+###############################################################################
+
+# Ensure FMOD bundles and plists use consistent line endings
+Assets/Plugins/FMOD/**/*.bundle text eol=lf
+Assets/Plugins/FMOD/**/Info.plist text eol=lf
